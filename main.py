@@ -60,11 +60,14 @@ print(makes_twenty(2,3))
 # Note: 'macdonald'.capitalize() returns 'Macdonald'
 
 def old_macdonald(name):
-    pass
+    if len(name) > 3:
+        return name[:3].capitalize() + name[3:].capitalize()
+    else:
+        return "Name is too short"
 
 # Check
 print("Check of Exercise 4")
-old_macdonald('macdonald')
+print(old_macdonald('macdonald'))
 
 # MASTER YODA: Given a sentence, return a sentence with the words reversed
 # master_yoda('I am home') --> 'home am I'
